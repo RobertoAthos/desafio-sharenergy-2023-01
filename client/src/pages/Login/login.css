@@ -1,0 +1,171 @@
+#form-container-login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+.login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+.form>input{
+    width: 400px;
+    padding: 0.8rem;
+    border: 1px solid #E6EEFF;
+    background-color: #e6eeff77;
+    font-size: 1.1rem;
+    border-radius: 0.7rem;
+    color: gray;
+}
+.remember-me{
+   width: 100%;
+   max-width: 350px;
+   display: flex;
+   justify-content: left;
+}
+.login-btn{
+    width: 400px;
+    background-color: #00A2A2;
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.7rem;
+}
+.login-btn:hover{
+    background-color: #008888;
+    transition: 300ms;
+}
+.login-text{
+    width: 100%;
+    padding: 1.5rem 0 3rem 5rem;
+    background-color: #00A2A2;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: white;
+}
+.login-text>h3{
+    font-size:1.7rem;
+}
+.login-text>ul>h4{
+    font-size:1.3rem;
+    margin-bottom:1rem ;
+}
+.login>.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.login>.logo>img{
+    max-width: 300px;
+}
+.login-text>ul{
+    width: 100%;
+    margin-top: 3rem;
+}
+.login-text>ul>li{
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.icon-check{
+    margin-right: 1rem;
+}
+
+.github>button{
+    background-color: #E6EEFF;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+.github>button:hover{
+    background-color: #dfdede;
+    transition: 300ms;
+}
+@media(max-width:1024px){
+    .login-content{
+       flex-wrap: wrap;
+    }
+    .login-text>ul>li{
+        justify-content: center;
+    }
+    .github{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media(max-width:560px){
+   .login>.form{
+        max-width:400px;
+    }
+    .login>.form>input{
+        width: 300px;
+    }
+    .login-btn{
+        width: 300px;
+    }
+    .login-text>h3{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    .login-text>ul>li{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width:1024px){
+    .login-text{
+        text-align: center;
+        padding: 1.5rem 0 3rem 0rem;
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width:425px){
+    .login>.form{
+        max-width:350px;
+    }
+    .login>.form>input{
+        width: 250px;
+    }
+    .login-btn{
+        width: 250px;
+    }
+}
+@media(max-width:375px){
+    .login>.form{
+        max-width:300px;
+    }
+    .login>.form>input{
+        width: 200px;
+    }
+    .login-btn{
+        width: 200px;
+    }
+}

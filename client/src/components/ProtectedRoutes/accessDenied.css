@@ -1,0 +1,25 @@
+.denied-error{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+}
+.denied-error>h1{
+    font-size: 5rem;
+    color: #00A2A2;
+}
+.denied-error>h2,p{
+    color: #5A719D;
+}
+.denied-error>a{
+    background-color: #00A2A2;
+    color: white;
+    padding: 1rem;
+}
+.denied-error>a:hover{
+    background-color: #007070;
+    transition: 300ms;
+}

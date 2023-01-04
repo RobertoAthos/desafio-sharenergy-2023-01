@@ -1,0 +1,14 @@
+.success-box{
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    background-color: rgb(0, 151, 0);
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.success-box>p{
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+}

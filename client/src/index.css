@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  background-color: #E6EEFF;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+input{
+  outline: none;
+}
+button{
+  cursor: pointer;
+  border: none;
+}

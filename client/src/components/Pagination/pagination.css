@@ -1,0 +1,17 @@
+.pagination-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.pagination-btn{
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    padding: 0.4rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    width: 80px;
+    margin: 1rem;
+    background-color: white;
+}
