@@ -7,6 +7,7 @@ import "./login.css";
 import { Loader } from "../../components/Loader/Loader";
 import { AiOutlineLink } from "react-icons/ai";
 import Transition from "../../components/Transition";
+import { getUserLocalStorage } from "../../context/AuthProvider/util";
 
 export const Login = () => {
   const auth = useAuth();
@@ -51,10 +52,6 @@ export const Login = () => {
                 placeholder="senha"
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <div className="remember-me">
-                <input type="checkbox" />
-                remember me
-              </div>
               {isloading ? (
                 <Loader />
               ) : (
@@ -96,3 +93,4 @@ export const Login = () => {
     </section>
   );
 };
+
