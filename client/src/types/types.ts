@@ -42,3 +42,4 @@ export interface AnimateProps {
     durationIn?: number;
     durationOut?: number;
   }
+

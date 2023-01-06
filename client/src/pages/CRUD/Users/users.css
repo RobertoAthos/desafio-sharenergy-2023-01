@@ -86,7 +86,9 @@
 #delete:hover,#edit:hover,#eye:hover{
     transform: scale(1.1);
 }
-
+.empty-error{
+    color: #00A2A2;
+}
 @media(max-width:1200px){
     .user-box>.table-user{
         max-width: 800px;

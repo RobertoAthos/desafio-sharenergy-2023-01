@@ -3,14 +3,14 @@ import { BrowserRouter,Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header/Header'
 import { ProtectedRoutes } from './components/ProtectedRoutes'
 import { AuthContext } from './context/AuthProvider'
-import { CreateUser } from './pages/CreateUser/CreateUser'
-import { EditUser } from './pages/EditUser/EditUser'
+import { CreateUser } from './pages/CRUD/CreateUser/CreateUser'
+import { EditUser } from './pages/CRUD/EditUser/EditUser'
 import { Home } from './pages/Home/Home'
 import { HttpCat } from './pages/HttpCat/HttpCat'
 import { Login } from './pages/Login/Login'
 import { RandomDog } from './pages/RandomDog/RandomDog'
-import { UserDetail } from './pages/UserDetail/UserDetail'
-import { Users } from './pages/Users/Users'
+import { UserDetail } from './pages/CRUD/UserDetail/UserDetail'
+import { Users } from './pages/CRUD/Users/Users'
 
 function App() {
   const auth = useContext(AuthContext)

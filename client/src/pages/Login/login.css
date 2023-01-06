@@ -86,7 +86,10 @@
 .icon-check{
     margin-right: 1rem;
 }
-
+.error{
+    color: red;
+    font-size: 1rem;
+}
 .github>button{
     background-color: #E6EEFF;
     color: black;

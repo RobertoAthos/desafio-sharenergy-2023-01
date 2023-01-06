@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import {Link,useParams} from 'react-router-dom'
-import { UsersInfo } from '../../types/types'
+import { UsersInfo } from '../../../types/types'
 import './userDetail.css'
-import { API } from '../../services/api'
+import { API } from '../../../services/api'
 
 export const UserDetail = () => {
 

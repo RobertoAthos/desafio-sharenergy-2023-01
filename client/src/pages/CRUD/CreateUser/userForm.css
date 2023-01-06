@@ -1,18 +1,32 @@
+.User{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.user-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #00A2A2;
+}
+.illustration>img{
+    max-width: 600px;
+    object-fit: contain;
+}
 .User-form-container{
     width: 100%;
-    max-width: 600px;
-    margin: auto;
+    height: 100vh;
     background-color: white;
-    border-bottom-left-radius:1rem ;
-    border-bottom-right-radius:1rem ;
 }
-.User-form-container>form{
+.form-user{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1.4rem;
 }
-.User-form-container>form>input{
+.form-user>input{
     padding: 0.8rem;
     border: 1px solid #E6EEFF;
     border-radius: 0.7rem;
@@ -46,27 +60,17 @@
     padding: 0.7rem;
     color: #00A2A2;
 }
-.errors{
-    color: red;
-    display: none;
-}
-input:invalid ~ .errors {
-    display: block;
-}
-@media(max-width:660px){
-    .User-form-container{
-        max-width: 400px;
+@media(max-width:1200px){
+    .User{
+       flex-direction: column;
     }
 }
-@media(max-width:500px){
-    .User-form-container{
-        max-width: 350px;
+@media(max-width:670px){
+    .illustration{
+        max-width: 300px;
     }
 }
 @media(max-width:425px){
-    .User-form-container{
-        max-width: 300px;
-    }
     .user-text>h2{
         font-size: 1.2rem;
     }

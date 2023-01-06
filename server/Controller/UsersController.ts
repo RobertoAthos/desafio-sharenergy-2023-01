@@ -4,6 +4,7 @@ import {UserModel} from '../Models/UserModel'
 export async function createUser(req:Request, res:Response){
     try {
        const {name, email,tel,cpf,address} = req.body
+
        const newUser = new UserModel({
         name,
         email,
@@ -52,7 +53,7 @@ export async function updateUser(req:Request,res:Response){
         const user = await UserModel.findById(id)
 
         if(!user){
-            res.status(404).send('User do not exist')
+            res.status(404).send('Usuário não existe')
         }
 
         const updateUser = await UserModel.findByIdAndUpdate({_id:id}, {

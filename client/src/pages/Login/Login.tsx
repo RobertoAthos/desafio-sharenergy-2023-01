@@ -8,6 +8,7 @@ import { Loader } from "../../components/Loader/Loader";
 import { AiOutlineLink } from "react-icons/ai";
 import Transition from "../../components/Transition";
 import { getUserLocalStorage } from "../../context/AuthProvider/util";
+import { RightSide } from "../../components/LoginRightSide/RightSide";
 
 export const Login = () => {
   const auth = useAuth();
@@ -16,22 +17,32 @@ export const Login = () => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [isloading, setIsLoading] = useState(false);
+  const[error,setError] = useState('')
+
+
+  const validateForm = ()=>{
+    if(username  === '' || password === ''){
+      setError('Preencha os campos necessários')
+      setIsLoading(false)
+    } else if(username !== 'desafiosharenergy' || password !== 'sh@r3n3rgy'){
+      setError('Credenciais inválidas')
+      setIsLoading(false)
+    }
+  }
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      setIsLoading(true);
+      setIsLoading(true)
       await auth.authenticate(username, password);
       setIsLoading(false);
       navigate("/");
     } catch (error) {
-      alert("Credenciais Inválidas ou Conexão ruim");
+      validateForm()
     }
   };
-  const sharLink = () => {
-    window.location.href = "https://www.sharenergy.com.br/";
-  };
+
 
   return (
     <section id="form-container-login">
@@ -52,6 +63,7 @@ export const Login = () => {
                 placeholder="senha"
                 onChange={(e) => setPassword(e.target.value)}
               />
+              <p className="error">{error}</p>
               {isloading ? (
                 <Loader />
               ) : (
@@ -63,31 +75,7 @@ export const Login = () => {
           </Transition>
         </form>
         <div className="login-text">
-          <h3>Bem Vindo de Volta !</h3>
-          <ul>
-            <h4>O que você pode fazer:</h4>
-            <li>
-              <BsCheckCircleFill className="icon-check" />
-              Veja listagem de usuários da api Random Users.
-            </li>
-            <li>
-              <BsCheckCircleFill className="icon-check" />
-              Veja imagem de gatos de acordo com protocólos http.
-            </li>
-            <li>
-              <BsCheckCircleFill className="icon-check" />
-              Veja imagem de cachorros aleatoriamente.
-            </li>
-            <li>
-              <BsCheckCircleFill className="icon-check" />
-              Criar, atualizar,ver e deletar usuários.
-            </li>
-          </ul>
-          <div className="github">
-            <button onClick={sharLink}>
-              <AiOutlineLink className="icon-github" /> Website
-            </button>
-          </div>
+            <RightSide/>
         </div>
       </div>
     </section>

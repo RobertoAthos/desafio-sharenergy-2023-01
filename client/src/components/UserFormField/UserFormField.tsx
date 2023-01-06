@@ -1,6 +1,6 @@
 import React from "react";
 
-export const UserFormField = ({value, onChange, inputType,placeholder,name,required}:any) => {
+export const UserFormField = ({value, onChange, inputType,placeholder,name}:any) => {
   return (
       <input
         type={inputType}
