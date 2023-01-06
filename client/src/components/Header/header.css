@@ -32,9 +32,10 @@
 .menu-mobile.menuOpen{
     width: 60%;
     height: 100vh;
-    position: absolute;
-    top: 3;
+    position: fixed;
+    top: 0;
     background-color: #00A2A2;
+    z-index: 10;
 }
 .menu-mobile.menuClose{
     display: none;

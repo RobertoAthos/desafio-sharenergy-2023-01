@@ -61,7 +61,7 @@ export const Users = () => {
               <th></th>
             </tr>
           </thead>
-          <tbody>
+            <tbody>
             {users.map((user) => (
               <tr>
                 <td>{user.name}</td>

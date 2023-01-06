@@ -4,16 +4,16 @@ import { UserFormField } from "../../../components/UserFormField/UserFormField";
 import { API } from "../../../services/api";
 import { CreateUserInfo } from "../../../types/types";
 import { Link } from "react-router-dom";
-import { SuccessMessage } from "../../../components/SuccessMessage/SuccessMessage";
 import { Loader } from "../../../components/Loader/Loader";
 import illustration2 from "../../../assets/illustration2.png";
 import Transition from "../../../components/Transition";
+import {ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 // CSS É O MESMO DO "CREATE USER"
 
 export const EditUser = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
   const [values, setValues] = useState<CreateUserInfo>({
     name: "",
     email: "",
@@ -44,18 +44,25 @@ export const EditUser = () => {
 
   const handleSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setIsSuccess(true);
     try {
       setIsLoading(true);
-      e.preventDefault();
-      setIsLoading(false);
       await API.patch(`${id}/update`, values);
+      toast.success('Usuário Atualizado com Sucesso!', {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        theme: "light",
+      })
+      setIsLoading(false);
     } catch (error) {
-      alert("ERRO");
+      toast.error('Erro na hora de atualizar o usuário', {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        theme: "light",
+      })
     }
   };
-
-  setTimeout(() => setIsSuccess(false), 5000);
 
   return (
     <section className="User">
@@ -116,11 +123,6 @@ export const EditUser = () => {
                 name={"address"}
                 placeholder={"Endereço"}
               />
-              {isSuccess ? (
-                <SuccessMessage title="Usuário Atualizado com Sucesso !" />
-              ) : (
-                ""
-              )}
               {isLoading ? (
                 <Loader />
               ) : (
@@ -131,6 +133,7 @@ export const EditUser = () => {
             </form>
           </Transition>
         </div>
+        <ToastContainer/>
       </div>
       <div className="user-content">
         <Transition direction="right">

@@ -11,7 +11,7 @@ export const Home = () => {
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(0);
   const [search, setSearch] = useState("");
-  const[error,setError] = useState('')
+  const [error, setError] = useState("");
 
   const pages = Math.ceil(user.length / itemsPerPage);
   const startIndex = currentPage * itemsPerPage;
@@ -22,8 +22,10 @@ export const Home = () => {
     const loadUsers = async () => {
       const res = await axios.get("http://localhost:5000/api/randomUsers");
       setUser(res.data);
-      if(res.data.length === 0){
-        setError('Erro ao se conectar com a api 😔 , verifique sua conexão com a internet')
+      if (res.data.length === 0) {
+        setError(
+          "Erro ao se conectar com a api 😔 , verifique sua conexão com a internet"
+        );
       }
     };
     loadUsers();
@@ -41,7 +43,9 @@ export const Home = () => {
         />
       </div>
       <div className="person-box">
-        <RandomUser currentItems={currentItems} search={search} />
+        {user.length === 0 ? <Loader/> : (
+          <RandomUser currentItems={currentItems} search={search} />
+        )}
         <h2 className="empty-error">{error}</h2>
       </div>
       <Pagination
