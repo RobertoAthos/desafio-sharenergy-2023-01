@@ -2,7 +2,7 @@
 
 Repositório de uma aplicação sugerida pela Sharenergy para concorrer à uma vaga de Desenvolvedor Back-End Jr. O projeto é uma aplicação fullStack usando as seguintes tecnologias: **ReactJs, Nodejs(express) e mongoose(MongoDB).**
 
-### <a href='https://www.youtube.com/watch?v=mbmNmH4OXWo&ab_channel=RoberTnoBeat' target='_blank'>CLIQUE AQUI PARA VER O VÍDEO EXPLICATIVO</a>
+### <a href='https://www.youtube.com/watch?v=mbmNmH4OXWo&ab_channel=RoberTnoBeat'>CLIQUE AQUI PARA VER O VÍDEO EXPLICATIVO</a>
 
 <img src='https://user-images.githubusercontent.com/94712001/211158727-e6917d47-d7b2-45f4-8540-1fb4260773af.png' alt='imagem da aplicação'/>
 
